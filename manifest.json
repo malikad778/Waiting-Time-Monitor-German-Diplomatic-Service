@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "German Diplomatic Service Waiting Time Monitor",
+  "version": "1.0",
+  "description": "Monitors waiting time for German diplomatic service applications and displays it in the browser toolbar",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webRequest",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://app.digital.diplo.de/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.digital.diplo.de/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Waiting Time Monitor",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": ["https://app.digital.diplo.de/*"]
+    }
+  ]
+}
+

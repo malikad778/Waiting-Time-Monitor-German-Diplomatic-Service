@@ -2,69 +2,72 @@
 
 A Chrome extension that monitors waiting times for German diplomatic service applications and displays them in the browser toolbar.
 
-## Features
+Precise Day Calculation: Shows exact remaining days in your waiting period
+Portal Integration: Works seamlessly with the official German Diplomatic Service portal
+Instant Access: Quick one-click access to waiting time information
+User-Friendly Interface: Clean, simple display of remaining days
+Secure: Only activates when logged into the official portal
 
-- **Automatic Detection**: Automatically detects when you visit your application page on app.digital.diplo.de
-- **Real-time Monitoring**: Intercepts API calls to extract waiting time data from the network tab
-- **Toolbar Display**: Shows waiting time in weeks directly in the browser toolbar badge
-- **Detailed Popup**: Click the extension icon to see detailed information including:
-  - Exact waiting time in weeks
-  - Waiting list status (active/inactive)
-  - Last update time
-  - Quick refresh and navigation options
-- **Auto-refresh**: Automatically refreshes data every 5 minutes
-- **Persistent Storage**: Remembers your data between browser sessions
+Benefits:
 
-## Installation
+Eliminates uncertainty about application timelines
+Helps candidates plan their schedule more effectively
+Reduces anxiety by providing clear, concrete information
+No need to manually calculate waiting periods
 
-1. Download the extension files
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the extension folder
-5. The extension icon should appear in your toolbar
 
-## Usage
+Installation & Usage Instructions
+Step 1: Load the Extension
 
-1. Visit your application page on https://app.digital.diplo.de/myapplications/[your-application-id]
-2. The extension will automatically detect and extract waiting time data
-3. The waiting time will be displayed as a badge on the extension icon (e.g., "7w" for 7 weeks)
-4. Click the extension icon to see detailed information
-5. Use the "Refresh Now" button to manually update the data
-6. Use the "Open Page" button to quickly navigate to your application page
+Open your browser (Chrome, Firefox, or Edge)
+Press F12 or right-click and select "Inspect Element" to open Developer Tools
+Navigate to the Extensions tab in Developer Tools
+Click "Load unpacked" or "Load temporary extension"
+Select the Waiting Time Monitor extension folder
+The extension should now appear in your browser's extension bar
 
-## How It Works
+Step 2: Access the Portal
 
-The extension uses multiple techniques to capture waiting time data:
+Navigate to the German Diplomatic Service portal
+Log in with your candidate credentials
+Ensure you are fully logged in and can see your application dashboard
 
-1. **Network Request Monitoring**: Listens for API calls to the `/limits` endpoint
-2. **Content Script Injection**: Injects scripts into the diplomatic service website
-3. **Fetch Interception**: Intercepts fetch requests to capture response data
-4. **Automatic Refresh**: Periodically checks for updated data
+Step 3: Reload and Activate
 
-## Data Privacy
+Reload the portal page (press F5 or Ctrl+R)
+Wait for the page to fully load
+Look for the Waiting Time Monitor icon in your browser's extension bar
+Click on the extension icon
 
-- All data is stored locally in your browser
-- No data is sent to external servers
-- The extension only works on app.digital.diplo.de
-- Uses your existing browser session and authentication
+Step 4: View Your Waiting Time
 
-## Troubleshooting
+The extension will automatically calculate and display your exact remaining days
+The information will appear in a clear, easy-to-read format
+Numbers are updated in real-time based on your application status
 
-**No data showing?**
-- Make sure you're logged into app.digital.diplo.de
-- Visit your specific application page (not just the main page)
-- Try clicking "Refresh Now" in the popup
-- Check that the extension has permission to access the website
 
-**Data not updating?**
-- The extension refreshes automatically every 5 minutes
-- You can manually refresh using the "Refresh Now" button
-- Try reloading the application page in your browser
+Important Notes
+Requirements:
 
-**Extension not working?**
-- Make sure you're on the correct website (app.digital.diplo.de)
-- Check that the extension is enabled in chrome://extensions/
-- Try disabling and re-enabling the extension
+Must be logged into the German Diplomatic Service portal
+Extension needs to be loaded in each browser session (for unpacked extensions)
+Internet connection required for real-time calculations
+
+Troubleshooting:
+
+Not showing days? Ensure you're logged in and reload the page
+Extension not working? Reload the extension in Developer Tools
+Incorrect information? Clear browser cache and try again
+Portal updates? The extension may need updates if the portal changes
+
+Privacy & Security:
+
+Extension only accesses data when you're logged into the official portal
+No personal information is stored or transmitted externally
+All calculations are performed locally in your browser
+
+Support:
+If you encounter any issues or if the portal interface changes, the extension may need to be updated to maintain compatibility with the latest portal version.
 
 ## Technical Details
 
